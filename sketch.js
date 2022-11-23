@@ -53,7 +53,7 @@ function setup(){
 }
 
 function draw(){
-  background(220);
+  background(238);
  
   if (ready){ //happens after mousepressed
     createTiles();
@@ -97,12 +97,12 @@ function createTiles(){
   pg = createGraphics(tileSize, tileSize);
   pg.background(0);
   pg.noStroke();
-  pg.fill(220);
+  pg.fill(238);
   pg.ellipse(0, 0, tileSize*2, tileSize*2);
   tiles[i++] = pg;
   
   pg1 = createGraphics(tileSize, tileSize);
-  pg1.background(220);
+  pg1.background(238);
   pg1.noStroke();
   pg1.fill(0);
   pg1.ellipse(0, 0, tileSize*2, tileSize*2);
