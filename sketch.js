@@ -19,6 +19,9 @@ let sinSpeed= .5;
 let sinLevel = 20;
 let rotateSpeed=.006;
 
+
+
+//text
 let str = 'KEYON MILL FALLS PRESS TO BEGIN KEYON MILL FALLS PRESS TO BEGIN ';
 
 let startAngle =    0;     // angle where text should start
@@ -53,7 +56,7 @@ function setup(){
 }
 
 function draw(){
-  background(238);
+  background(112);
  
   if (ready){ //happens after mousepressed
     createTiles();
@@ -97,12 +100,12 @@ function createTiles(){
   pg = createGraphics(tileSize, tileSize);
   pg.background(0);
   pg.noStroke();
-  pg.fill(238);
+  pg.fill(112);
   pg.ellipse(0, 0, tileSize*2, tileSize*2);
   tiles[i++] = pg;
   
   pg1 = createGraphics(tileSize, tileSize);
-  pg1.background(238);
+  pg1.background(112);
   pg1.noStroke();
   pg1.fill(0);
   pg1.ellipse(0, 0, tileSize*2, tileSize*2);
