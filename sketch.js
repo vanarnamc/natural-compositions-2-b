@@ -45,7 +45,6 @@ function setup(){
   hMargin=height/margin;
   amp = new p5.Amplitude();
   amp.smooth(5);
-
  //noLoop();
  background(bg);
 
@@ -56,9 +55,10 @@ function setup(){
 }
 
 function draw(){
-  background(112);
- 
+  background(192);
+  cursor(HAND);
   if (ready){ //happens after mousepressed
+    cursor(ARROW);
     createTiles();
     let vol = amp.getLevel();
     imageMode(CENTER);
@@ -82,7 +82,10 @@ function draw(){
           pop();
         }
       }
+
     }
+    
+    
   }
   else{ //TEXT DISPLAY
     translate(width/2,height/2);
@@ -100,12 +103,12 @@ function createTiles(){
   pg = createGraphics(tileSize, tileSize);
   pg.background(0);
   pg.noStroke();
-  pg.fill(112);
+  pg.fill(192);
   pg.ellipse(0, 0, tileSize*2, tileSize*2);
   tiles[i++] = pg;
   
   pg1 = createGraphics(tileSize, tileSize);
-  pg1.background(112);
+  pg1.background(192);
   pg1.noStroke();
   pg1.fill(0);
   pg1.ellipse(0, 0, tileSize*2, tileSize*2);
